@@ -27,7 +27,100 @@
         </div>
       </nav>
     </header>
-    <main>Listing</main>
+    <main class="main">
+      <aside class="listing" id="listing">
+        <div class="header">
+          <form class="search-frm" action="" method="get">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search"
+            />
+          </form>
+        </div>
+        <div class="list">
+          <div class="title">
+            <h3>Contacts</h3>
+            <span class="btn add-icon material-symbols-outlined" id="add-icon">
+              add
+            </span>
+          </div>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon family material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item active">
+              <div class="c-image c-image-txt">JD</div>
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon family material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item">
+              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon friend material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item">
+              <div class="c-image c-image-txt">JD</div>
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon family material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item">
+              <div class="c-image c-image-txt">JD</div>
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon friend material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item">
+              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon office material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <article class="container">
+        <section>Details</section>
+        <section>Add</section>
+        <section>Edit</section>
+      </article>
+    </main>
     <script src="js/main.js"></script>
   </body>
 </html>
