@@ -3,10 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AddressBook</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <nav class="nav" id="navbar">
+        <a href="#" class="nav__logo">Address<strong>Book</strong></a>
+        <div class="nav__user">
+          <!-- Theme change button -->
+          <div id="theme-button">
+            <input type="checkbox" name="chkTheme" id="chkTheme" />
+            <label for="chkTheme" id="lblTheme">
+              <span class="theme-label">Dark mode</span>
+              <span class="switch"></span>
+            </label>
+          </div>
+          <!-- Logout button -->
+          <a href="#" class="btn">
+            <span class="material-symbols-outlined"> logout </span>
+            <span class="logout-text">Logout</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>Listing</main>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,246 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*==================== MATERIAL ICONS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 230; /* Red 0 - Orange 24 - Blue 230 - Purple 250 - Green 142 - Pink 340*/
+
+  /* HSL color mode */
+  /* Primary Colors */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-dark: hsl(var(--hue-color), 57%, 53%);
+  --first-color-light: hsl(var(--hue-color), 92%, 85%);
+  /* BG Colors */
+  --bg-color: hsl(var(--hue-color), 60%, 99%);
+  --bg-first-color: hsl(var(--hue-color), 69%, 90%);
+  --bg-first-color-dark: hsl(var(--hue-color), 57%, 87%);
+  --bg-first-color-light: hsl(var(--hue-color), 92%, 95%);
+  /* Text Colors */
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  /* Notification Colors */
+  --success-color: hsl(149, 58%, 54%);
+  --danger-color: hsl(339, 82%, 51%);
+  --warning-color: hsl(51, 73%, 55%);
+  /* Scroll Colors */
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  /* Shadow Colors */
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark_mode {
+  /* HSL color mode */
+  /* BG Colors */
+  --bg-color: hsl(var(--hue-color), 28%, 12%);
+  --bg-first-color: hsl(var(--hue-color), 38%, 17%);
+  --bg-first-color-dark: hsl(var(--hue-color), 40%, 15%);
+  --bg-first-color-light: hsl(var(--hue-color), 22%, 21%);
+  /* Text Colors */
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  /* Scroll Colors */
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  /* Shadow Colors */
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/*==================== BASE / GLOBAL ====================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--bg-first-color-light);
+  color: var(--text-color);
+  width: 100vw;
+  height: 100dvh;
+  height: -webkit-fill-available;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  background-color: var(--first-color);
+  color: var(--bg-color);
+  font-size: var(--normal-font-size);
+  padding-inline: 1rem;
+  padding-block: 0.3rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 4px var(--shadow-color);
+  transition: all 0.3s linear;
+}
+.btn:hover {
+  box-shadow: 2px 3px 8px var(--shadow-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+main {
+  margin-top: 4rem;
+  padding: 1rem;
+}
+/*==================== HEADER / NAV ====================*/
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  cursor: pointer;
+  padding: 1rem;
+  margin-right: auto;
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  transition: All 0.1s linear;
+}
+
+.nav__logo:hover {
+  text-shadow: 3px 3px 8px var(--shadow-color);
+}
+body.dark_mode .nav__logo:hover {
+  text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+.nav__user {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+#chkTheme {
+  display: none;
+}
+
+#lblTheme {
+  display: flex;
+  align-items: center;
+  cursor: default;
+  margin-right: 1rem;
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+}
+
+#lblTheme > span.switch {
+  width: 3rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  background-color: var(--bg-first-color-dark);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#lblTheme > span.switch::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(1.5rem - 4px);
+  height: calc(1.5rem - 4px);
+  background-color: var(--bg-first-color-light);
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+#chkTheme:checked + #lblTheme > span.switch::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+  background-color: var(--first-color);
+}
+.theme-label,
+.logout-text {
+  display: none;
+}
+
+/*==================== LISTING ====================*/
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices min-width: 500px */
+@media screen and (min-width: 500px) {
+  .theme-label,
+  .logout-text {
+    display: block;
+  }
+}
+/* For medium devices min-width: 768px */
+@media screen and (min-width: 768px) {
+}
+/* For large devices min-width: 1200px */
+@media screen and (min-width: 1920px) {
+  /* Font size for large devices */
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+  main {
+    margin-top: 5rem;
+  }
+}
