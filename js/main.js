@@ -44,3 +44,36 @@ if (containerClose) {
     container.classList.remove("show");
   });
 }
+
+/*==================== ADD/EDIT DETAILS ====================*/
+/*===== FORM VALIDATIONS =====*/
+const forms = document.querySelectorAll(".needs-validation");
+
+Array.from(forms).forEach((form) => {
+  form.addEventListener(
+    "submit",
+    (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      form.classList.add("was-validated");
+    },
+    false
+  );
+});
+
+/*===== ADD PAGE IMAGE PREVIEW =====*/
+const addCDImage = document.getElementById("add-cdimage"),
+  addCDImg = document.getElementById("add-cdimg");
+addCDImage.onchange = (evt) => {
+  const file = addCDImage.files[0];
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      addCDImg.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+};

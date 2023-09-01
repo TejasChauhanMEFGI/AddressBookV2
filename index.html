@@ -181,7 +181,8 @@
         </div>
       </aside>
       <article id="container" class="container">
-        <section class="details" id="details">
+        <!--==================== DETAILS ====================-->
+        <!-- <section class="details" id="details">
           <div class="header">
             <button class="action-btn" id="nav-before-btn">
               <span class="nav-before material-symbols-outlined">
@@ -242,8 +243,164 @@
               </p>
             </div>
           </div>
+        </section> -->
+        <!--==================== ADD DETAILS ====================-->
+        <section class="add-details" id="add-details">
+          <div class="header">
+            <button class="action-btn" id="nav-before-btn">
+              <span class="nav-before material-symbols-outlined">
+                arrow_back_ios
+              </span>
+            </button>
+            <h1 class="card-title">Add New Contact</h1>
+          </div>
+          <div class="frm-details">
+            <form
+              id="add-contact-frm"
+              class="needs-validation"
+              action="#"
+              method="post"
+              enctype="multipart/form-data"
+              novalidate
+            >
+              <div class="form-control input-image">
+                <label for="add-cdimage">
+                  <img
+                    id="add-cdimg"
+                    class="cdimage"
+                    src="images/avatar.png"
+                    alt="Display Picture"
+                  />
+                  <span class="up-icon material-symbols-outlined">upload</span>
+                </label>
+                <input type="file" name="add-cdimage" id="add-cdimage" />
+              </div>
+
+              <div class="form-control-group">
+                <div class="form-control">
+                  <label for="title">Title<span class="txt-red">*</span></label>
+                  <select name="title" id="title" required>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Miss.">Miss.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </select>
+                  <span class="invalid-feedback">Please select title.</span>
+                </div>
+
+                <div class="form-control">
+                  <label for="fname">
+                    First Name<span class="txt-red">*</span>
+                  </label>
+                  <input type="text" name="fname" id="fname" required />
+                  <span class="invalid-feedback">Please enter first name.</span>
+                </div>
+
+                <div class="form-control">
+                  <label for="lname">
+                    Last Name<span class="txt-red">*</span>
+                  </label>
+                  <input type="text" name="lname" id="lname" required />
+                  <span class="invalid-feedback">Please enter last name.</span>
+                </div>
+              </div>
+
+              <div class="form-control-group">
+                <div class="form-control">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" />
+                  <span class="invalid-feedback"
+                    >Please enter valid email.</span
+                  >
+                </div>
+
+                <div class="form-control">
+                  <label for="mobile"
+                    >Mobile<span class="txt-red">*</span></label
+                  >
+                  <input type="text" name="mobile" id="mobile" required />
+                  <span class="invalid-feedback"
+                    >Please enter valid mobile number.</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-control">
+                <label for="aline1">
+                  Address Line 1<span class="txt-red">*</span>
+                </label>
+                <input type="text" name="aline1" id="aline1" required />
+                <span class="invalid-feedback">Please enter your address.</span>
+              </div>
+              <div class="form-control">
+                <label for="aline2">Address Line 2</label>
+                <input type="text" name="aline2" id="aline2" />
+              </div>
+              <div class="form-control-group">
+                <div class="form-control">
+                  <label for="city">City<span class="txt-red">*</span></label>
+                  <input type="text" name="city" id="city" required />
+                  <span class="invalid-feedback">Please enter city.</span>
+                </div>
+                <div class="form-control">
+                  <label for="state">State<span class="txt-red">*</span></label>
+                  <input type="text" name="state" id="state" required />
+                  <span class="invalid-feedback">Please enter state.</span>
+                </div>
+                <div class="form-control">
+                  <label for="country">
+                    Country<span class="txt-red">*</span>
+                  </label>
+                  <input type="text" name="country" id="country" required />
+                  <span class="invalid-feedback">Please enter country.</span>
+                </div>
+              </div>
+              <div class="form-control">
+                <label>Tags</label>
+                <div class="radio-container-inline">
+                  <input type="radio" name="tags" id="addFrmFamily" checked />
+                  <label for="addFrmFamily"
+                    >Family
+                    <span class="tag-icon family material-symbols-outlined">
+                      bookmark
+                    </span>
+                  </label>
+                  <input type="radio" name="tags" id="addFrmFriend" />
+                  <label for="addFrmFriend"
+                    >Friend
+                    <span class="tag-icon friend material-symbols-outlined">
+                      bookmark
+                    </span>
+                  </label>
+                  <input type="radio" name="tags" id="addFrmOffice" />
+                  <label for="addFrmOffice"
+                    >Office
+                    <span class="tag-icon office material-symbols-outlined">
+                      bookmark
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="note">Note</label>
+                <textarea name="note" id="note"></textarea>
+              </div>
+              <div class="form-control btns">
+                <button type="submit" class="btn btn-success">
+                  <span class="icon material-symbols-outlined">
+                    check_circle
+                  </span>
+                  Save
+                </button>
+                <button type="reset" id="add-cancel-btn" class="btn btn-danger">
+                  <span class="icon material-symbols-outlined"> cancel </span>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
-        <!-- <section>Add</section>
+        <!--
         <section>Edit</section> -->
       </article>
     </main>
