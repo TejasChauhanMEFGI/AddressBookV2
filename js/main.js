@@ -77,3 +77,17 @@ addCDImage.onchange = (evt) => {
     reader.readAsDataURL(file);
   }
 };
+
+/*===== EDIT PAGE IMAGE PREVIEW =====*/
+const editCDImage = document.getElementById("edit-cdimage"),
+  editCDImg = document.getElementById("edit-cdimg");
+editCDImage.onchange = (evt) => {
+  const [file] = editCDImage.files;
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      editCDImg.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+};

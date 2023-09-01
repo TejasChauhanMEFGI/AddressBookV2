@@ -245,7 +245,7 @@
           </div>
         </section> -->
         <!--==================== ADD DETAILS ====================-->
-        <section class="add-details" id="add-details">
+        <!-- <section class="add-details" id="add-details">
           <div class="header">
             <button class="action-btn" id="nav-before-btn">
               <span class="nav-before material-symbols-outlined">
@@ -399,9 +399,202 @@
               </div>
             </form>
           </div>
-        </section>
-        <!--
-        <section>Edit</section> -->
+        </section> -->
+        <!--==================== EDIT DETAILS ====================-->
+        <div class="edit-details" id="edit-details">
+          <div class="header">
+            <button class="action-btn" id="nav-before-btn">
+              <span class="nav-before material-symbols-outlined">
+                arrow_back_ios
+              </span>
+            </button>
+            <h1 class="card-title">Edit Contact</h1>
+          </div>
+          <div class="frm-details">
+            <form
+              id="edit-contact-frm"
+              class="needs-validation"
+              action="#"
+              method="post"
+              enctype="multipart/form-data"
+              novalidate
+            >
+              <div class="form-control input-image">
+                <label for="edit-cdimage">
+                  <img
+                    id="edit-cdimg"
+                    class="cdimage"
+                    src="images/dp.jpg"
+                    alt="Display Picture"
+                  />
+                  <span class="up-icon material-symbols-outlined">upload</span>
+                </label>
+                <input type="file" name="edit-cdimage" id="edit-cdimage" />
+              </div>
+
+              <div class="form-control-group">
+                <div class="form-control">
+                  <label for="edit-title">
+                    Title<span class="txt-red">*</span>
+                  </label>
+                  <select name="edit-title" id="edit-title" required>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Miss.">Miss.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </select>
+                  <span class="invalid-feedback">Please select title.</span>
+                </div>
+
+                <div class="form-control">
+                  <label for="edit-fname">
+                    First Name<span class="txt-red">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="edit-fname"
+                    id="edit-fname"
+                    required
+                  />
+                  <span class="invalid-feedback">Please enter first name.</span>
+                </div>
+
+                <div class="form-control">
+                  <label for="edit-lname">
+                    Last Name<span class="txt-red">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="edit-lname"
+                    id="edit-lname"
+                    required
+                  />
+                  <span class="invalid-feedback">Please enter last name.</span>
+                </div>
+              </div>
+
+              <div class="form-control-group">
+                <div class="form-control">
+                  <label for="edit-email">Email</label>
+                  <input type="email" name="edit-email" id="edit-email" />
+                  <span class="invalid-feedback"
+                    >Please enter valid email.</span
+                  >
+                </div>
+
+                <div class="form-control">
+                  <label for="edit-mobile">
+                    Mobile<span class="txt-red">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="edit-mobile"
+                    id="edit-mobile"
+                    required
+                  />
+                  <span class="invalid-feedback"
+                    >Please enter valid mobile number.</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-control">
+                <label for="edit-aline1">
+                  Address Line 1<span class="txt-red">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="edit-aline1"
+                  id="edit-aline1"
+                  required
+                />
+                <span class="invalid-feedback">Please enter your address.</span>
+              </div>
+              <div class="form-control">
+                <label for="edit-aline2">Address Line 2</label>
+                <input type="text" name="edit-aline2" id="edit-aline2" />
+              </div>
+              <div class="form-control-group">
+                <div class="form-control">
+                  <label for="edit-city">
+                    City<span class="txt-red">*</span>
+                  </label>
+                  <input type="text" name="edit-city" id="edit-city" required />
+                  <span class="invalid-feedback">Please enter city.</span>
+                </div>
+                <div class="form-control">
+                  <label for="edit-state">
+                    State<span class="txt-red">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="edit-state"
+                    id="edit-state"
+                    required
+                  />
+                  <span class="invalid-feedback">Please enter state.</span>
+                </div>
+                <div class="form-control">
+                  <label for="edit-country">
+                    Country<span class="txt-red">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="edit-country"
+                    id="edit-country"
+                    required
+                  />
+                  <span class="invalid-feedback">Please enter country.</span>
+                </div>
+              </div>
+              <div class="form-control">
+                <label>Tags</label>
+                <div class="radio-container-inline">
+                  <input type="radio" name="edit-tags" id="editFrmFamily" />
+                  <label for="editFrmFamily"
+                    >Family
+                    <span class="tag-icon family material-symbols-outlined">
+                      bookmark
+                    </span>
+                  </label>
+                  <input type="radio" name="edit-tags" id="editFrmFriend" />
+                  <label for="editFrmFriend"
+                    >Friend
+                    <span class="tag-icon friend material-symbols-outlined">
+                      bookmark
+                    </span>
+                  </label>
+                  <input type="radio" name="edit-tags" id="editFrmOffice" />
+                  <label for="editFrmOffice"
+                    >Office
+                    <span class="tag-icon office material-symbols-outlined">
+                      bookmark
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="edit-note">Note</label>
+                <textarea name="edit-note" id="edit-note"></textarea>
+              </div>
+              <div class="form-control btns">
+                <button type="submit" class="btn btn-success">
+                  <span class="icon material-symbols-outlined">
+                    check_circle </span
+                  >Update
+                </button>
+                <button
+                  type="reset"
+                  id="edit-cancel-btn"
+                  class="btn btn-danger"
+                >
+                  <span class="icon material-symbols-outlined"> cancel </span
+                  >Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </article>
     </main>
     <script src="js/main.js"></script>
