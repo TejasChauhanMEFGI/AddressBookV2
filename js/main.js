@@ -24,3 +24,23 @@ if (selectedTheme === darkMode) {
   document.body.classList.remove(darkMode);
   chkTheme.checked = false;
 }
+
+/*==================== CONTAINER SHOW / HIDE ====================*/
+const container = document.getElementById("container"),
+  contactItem = document.querySelectorAll(".contact-item"),
+  containerClose = document.getElementById("nav-before-btn");
+
+/*===== DETAILS SHOW =====*/
+if (contactItem) {
+  contactItem.forEach((n) =>
+    n.addEventListener("click", () => {
+      container.classList.add("show");
+    })
+  );
+}
+/*===== DETAILS HIDE =====*/
+if (containerClose) {
+  containerClose.addEventListener("click", () => {
+    container.classList.remove("show");
+  });
+}
