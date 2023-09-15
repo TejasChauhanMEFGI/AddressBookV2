@@ -28,7 +28,8 @@ if (selectedTheme === darkMode) {
 /*==================== CONTAINER SHOW / HIDE ====================*/
 const container = document.getElementById("container"),
   contactItem = document.querySelectorAll(".contact-item"),
-  containerClose = document.getElementById("nav-before-btn");
+  containerClose = document.getElementById("nav-before-btn"),
+  addBtn = document.getElementById("add-btn");
 
 /*===== DETAILS SHOW =====*/
 if (contactItem) {
@@ -37,6 +38,11 @@ if (contactItem) {
       container.classList.add("show");
     })
   );
+}
+if (addBtn) {
+  addBtn.addEventListener("click", () => {
+    container.classList.add("show");
+  });
 }
 /*===== DETAILS HIDE =====*/
 if (containerClose) {
