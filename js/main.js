@@ -69,36 +69,3 @@ Array.from(forms).forEach((form) => {
     false
   );
 });
-
-/*===== ADD PAGE IMAGE PREVIEW =====*/
-const addCDImage = document.getElementById("add-cdimage"),
-  addCDImg = document.getElementById("add-cdimg");
-
-if (addCDImage) {
-  addCDImage.onchange = (evt) => {
-    const file = addCDImage.files[0];
-    if (file) {
-      var reader = new FileReader();
-      reader.onload = function () {
-        addCDImg.src = reader.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-}
-
-/*===== EDIT PAGE IMAGE PREVIEW =====*/
-const editCDImage = document.getElementById("edit-cdimage"),
-  editCDImg = document.getElementById("edit-cdimg");
-if (editCDImage) {
-  editCDImage.onchange = (evt) => {
-    const [file] = editCDImage.files;
-    if (file) {
-      var reader = new FileReader();
-      reader.onload = function () {
-        editCDImg.src = reader.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-}

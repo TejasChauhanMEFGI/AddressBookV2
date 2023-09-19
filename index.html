@@ -48,7 +48,7 @@
           </div>
           <ul class="contact-list">
             <li class="contact-item">
-              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-image c-image-txt">JD</div>
               <div class="c-info">
                 <h4 class="c-name">John Doe</h4>
                 <p class="c-email">john.doe@gmail.com</p>
@@ -70,7 +70,7 @@
               </span>
             </li>
             <li class="contact-item">
-              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-image c-image-txt">JD</div>
               <div class="c-info">
                 <h4 class="c-name">John Doe</h4>
                 <p class="c-email">john.doe@gmail.com</p>
@@ -103,7 +103,7 @@
               </span>
             </li>
             <li class="contact-item">
-              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-image c-image-txt">JD</div>
               <div class="c-info">
                 <h4 class="c-name">John Doe</h4>
                 <p class="c-mobile">9898989898</p>
@@ -113,17 +113,6 @@
               </span>
             </li>
             <li class="contact-item">
-              <img class="c-image" src="images/dp.jpg" alt="person" />
-              <div class="c-info">
-                <h4 class="c-name">John Doe</h4>
-                <p class="c-email">john.doe@gmail.com</p>
-                <p class="c-mobile">9898989898</p>
-              </div>
-              <span class="tag-icon family material-symbols-outlined">
-                bookmark
-              </span>
-            </li>
-            <li class="contact-item">
               <div class="c-image c-image-txt">JD</div>
               <div class="c-info">
                 <h4 class="c-name">John Doe</h4>
@@ -131,17 +120,6 @@
                 <p class="c-mobile">9898989898</p>
               </div>
               <span class="tag-icon family material-symbols-outlined">
-                bookmark
-              </span>
-            </li>
-            <li class="contact-item">
-              <img class="c-image" src="images/dp.jpg" alt="person" />
-              <div class="c-info">
-                <h4 class="c-name">John Doe</h4>
-                <p class="c-email">john.doe@gmail.com</p>
-                <p class="c-mobile">9898989898</p>
-              </div>
-              <span class="tag-icon friend material-symbols-outlined">
                 bookmark
               </span>
             </li>
@@ -168,7 +146,29 @@
               </span>
             </li>
             <li class="contact-item">
-              <img class="c-image" src="images/dp.jpg" alt="person" />
+              <div class="c-image c-image-txt">JD</div>
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon family material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item">
+              <div class="c-image c-image-txt">JD</div>
+              <div class="c-info">
+                <h4 class="c-name">John Doe</h4>
+                <p class="c-email">john.doe@gmail.com</p>
+                <p class="c-mobile">9898989898</p>
+              </div>
+              <span class="tag-icon friend material-symbols-outlined">
+                bookmark
+              </span>
+            </li>
+            <li class="contact-item">
+              <div class="c-image c-image-txt">JD</div>
               <div class="c-info">
                 <h4 class="c-name">John Doe</h4>
                 <p class="c-mobile">9898989898</p>
@@ -182,7 +182,7 @@
       </aside>
       <article id="container" class="container">
         <!--==================== DETAILS ====================-->
-        <!-- <section class="details" id="details">
+        <section class="details" id="details">
           <div class="header">
             <button class="action-btn" id="nav-before-btn">
               <span class="nav-before material-symbols-outlined">
@@ -203,8 +203,8 @@
           </div>
           <div class="info">
             <div class="basic-info">
-              <img src="images/dp.jpg" alt="John Doe" />
-              <div>
+              <div class="info-dp">JD</div>
+              <div class="info-text">
                 <h1>
                   Mr. John Doe
                   <span class="tag-icon family material-symbols-outlined">
@@ -243,9 +243,9 @@
               </p>
             </div>
           </div>
-        </section> -->
+        </section>
         <!--==================== ADD DETAILS ====================-->
-        <section class="add-details" id="add-details">
+        <!-- <section class="add-details" id="add-details">
           <div class="header">
             <button class="action-btn" id="nav-before-btn">
               <span class="nav-before material-symbols-outlined">
@@ -263,19 +263,6 @@
               enctype="multipart/form-data"
               novalidate
             >
-              <div class="form-control input-image">
-                <label for="add-cdimage">
-                  <img
-                    id="add-cdimg"
-                    class="cdimage"
-                    src="images/avatar.png"
-                    alt="Display Picture"
-                  />
-                  <span class="up-icon material-symbols-outlined">upload</span>
-                </label>
-                <input type="file" name="add-cdimage" id="add-cdimage" />
-              </div>
-
               <div class="form-control-group">
                 <div class="form-control">
                   <label for="title">Title<span class="txt-red">*</span></label>
@@ -356,7 +343,7 @@
                 </div>
               </div>
               <div class="form-control">
-                <label>Tags</label>
+                <label>Tags<span class="txt-red">*</span></label>
                 <div class="radio-container-inline">
                   <input type="radio" name="tags" id="addFrmFamily" checked />
                   <label for="addFrmFamily"
@@ -399,7 +386,7 @@
               </div>
             </form>
           </div>
-        </section>
+        </section> -->
         <!--==================== EDIT DETAILS ====================-->
         <!-- <section class="edit-details" id="edit-details">
           <div class="header">
@@ -419,19 +406,6 @@
               enctype="multipart/form-data"
               novalidate
             >
-              <div class="form-control input-image">
-                <label for="edit-cdimage">
-                  <img
-                    id="edit-cdimg"
-                    class="cdimage"
-                    src="images/dp.jpg"
-                    alt="Display Picture"
-                  />
-                  <span class="up-icon material-symbols-outlined">upload</span>
-                </label>
-                <input type="file" name="edit-cdimage" id="edit-cdimage" />
-              </div>
-
               <div class="form-control-group">
                 <div class="form-control">
                   <label for="edit-title">
@@ -548,7 +522,7 @@
                 </div>
               </div>
               <div class="form-control">
-                <label>Tags</label>
+                <label>Tags<span class="txt-red">*</span></label>
                 <div class="radio-container-inline">
                   <input type="radio" name="edit-tags" id="editFrmFamily" />
                   <label for="editFrmFamily"
